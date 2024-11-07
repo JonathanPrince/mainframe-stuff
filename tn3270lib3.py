@@ -1024,3 +1024,214 @@ class TN3270:
         b3 = struct.pack(">B", (value & 0xFF00) >> 8)
         b4 = struct.pack(">B", (value & 0xFF))
         return b
+
+    def HIGH8(self, s):
+        return struct.pack(">B", (s >> 8) & 0xFF)
+
+    def abort(self, code):
+        self.msg(1, "File Transfer - ABORT ABORT ABORT")
+        self.output_buffer = []
+        self.output_buffer.append(AID_SF)
+        self.output_buffer.append(self.set_16(9))
+        self.output_buffer.append(SF_TRANSFER_DATA)
+        self.output_buffer.append(self.HIGH8(code))
+        self.output_buffer.append(struct.pack(">B", TR_ERROR_REPLY))
+        self.output_buffer.append(self.set_16(TR_ERROR_HDR))
+        self.output_buffer.append(self.set_16(TR_ERR_CMDFAIL))
+        self.send_tn3270(self.output_buffer)
+        self.output_buffer = []
+        self.ft_state = FT_NONE
+
+    # The following four functions allow for the sending and receiving of files
+    # using IND$FILE
+    #
+    # NOTE: YOU MUST BE AT THE TSO 'READY' PROMPT TO USE THESE
+    #
+
+    def send_ascii_file(self, dataset, filename):
+        """ Sends an ASCII file using IND$FILE
+            This will replace NL with CR/LF """
+        self.msg(1, "FILE TRANSFER: Writing %s to dataset %s at %s:%d in ASCII format", filename, dataset, self.host, self.port)
+        self.ft_state = FT_AWAIT_ACK
+        self.ascii_file = True
+        self.file = open(filename, "rb")
+        self.filename = filename
+        self.send_cursor("IND$FILE PUT " + dataset + " ASCII CRLF")
+        while self.ft_state != FT_NONE:
+            self.get_all_data()
+        self.file.close()
+        self.ascii_file = False  # reset the flag in case we do a binary transfer next
+
+    def send_binary_file(self, dataset, filename):
+        """ Sends a file using IND$FILE """
+        self.msg(1, "FILE TRANSFER: Writing %s to dataset %s at %s:%d", filename, dataset, self.host, self.port)
+        self.ft_state = FT_AWAIT_ACK
+        self.ascii_file = False
+        self.file = open(filename, "rb")
+        self.filename = filename
+        self.send_cursor("IND$FILE PUT " + dataset)
+        while self.ft_state != FT_NONE:
+            self.get_all_data()
+        self.file.close()
+
+    def get_ascii_file(self, dataset, filename):
+        """ Gets a dataset from the Mainframe using ASCII
+            translation (mainframe does the translation) """ 
+        self.msg(1, "FILE TRANSFER: Getting dataset %s from %s:%d writing to %s as ASCII", dataset, self.host, self.port, filename)
+        self.ft_state = FT_AWAIT_ACK
+        self.ascii_file = True
+        self.file = open(filename, 'wb')  # file object
+        self.filename = filename
+        self.send_cursor("IND$FILE GET " + dataset + " ASCII CRLF")
+        while self.ft_state != FT_NONE:
+            self.get_all_data()
+        self.file.close()
+        self.ascii_file = False  # reset the flag in case we do a binary transfer next
+
+    def get_binary_file(self, dataset, filename):
+        """ Gets a dataset from the mainframe without any translation """
+        self.msg(1, "FILE TRANSFER: Getting dataset %s from %s:%d writing to %s", dataset, self.host, self.port, filename)
+        self.ft_state = FT_AWAIT_ACK
+        self.ascii_file = False
+        self.file = open(filename, 'wb')  # file object
+        self.filename = filename
+        self.send_cursor("IND$FILE GET " + dataset + " ASCII CRLF")
+        while self.ft_state != FT_NONE:
+            self.get_all_data()
+        self.file.close()
+
+    def send_cursor(self, data):
+        output_addr = 0
+        self.output_buffer = []
+        self.msg(1, "Generating Output Buffer for send_cursor")
+        self.output_buffer.insert(output_addr, ENTER)
+        output_addr += 1
+        self.msg(1, "Output Address: %r", output_addr)
+        self.msg(1, "Cursor Location (" + str(self.cursor_addr) + "): Row: %r, Column: %r ",
+                 self.BA_TO_ROW(self.cursor_addr),
+                 self.BA_TO_COL(self.cursor_addr))
+        self.output_buffer.insert(output_addr, self.ENCODE_BADDR(self.cursor_addr))
+        output_addr += 1
+        self.output_buffer.append(SBA)
+        self.output_buffer.append(self.ENCODE_BADDR(self.cursor_addr))
+        for lines in data:
+            self.msg(1, 'Adding %r to the output buffer', lines.encode('cp500'))
+            self.output_buffer.append(lines.encode('cp500'))
+        return self.send_tn3270(self.output_buffer)
+
+    def send_pf(self, pf):
+        """ Sends an F1 through F24 """
+        if (pf > 24) or (pf < 0):
+            self.msg(1, "PF Value must be between 1 and 24. Received %s", pf)
+            return False
+
+        self.output_buffer = []
+        self.msg(1, "Generating Output Buffer for send_pf: %s", "PF" + str(pf))
+        self.output_buffer.append(eval("PF" + str(pf)))
+        self.msg(1, "Cursor Location (" + str(self.cursor_addr) + "): Row: %r, Column: %r ",
+                 self.BA_TO_ROW(self.cursor_addr),
+                 self.BA_TO_COL(self.cursor_addr))
+        self.output_buffer.append(self.ENCODE_BADDR(self.cursor_addr))
+
+        return self.send_tn3270(self.output_buffer)
+
+    def send_aid(self, aid):
+        """ Sends an F1 through F24 """
+        aid = aid.upper()
+        aids = ['NO', 'QREPLY', 'ENTER', 'PF1', 'PF2', 'PF3', 'PF4', 'PF5', 'PF6',
+                'PF7', 'PF8', 'PF9', 'PF10', 'PF11', 'PF12', 'PF13', 'PF14', 'PF15', 'PF16',
+                'PF17', 'PF18', 'PF19', 'PF20', 'PF21', 'PF22', 'PF23', 'PF24', 'OICR',
+                'MSR_MHS', 'SELECT', 'PA1', 'PA2', 'PA3', 'CLEAR', 'SYSREQ']
+        if aid not in aids:
+            self.msg(1, "%s not a valid AID", aid)
+            return False
+
+        self.output_buffer = []
+        self.msg(1, "Generating Output Buffer for send_aid: %s", aid)
+        self.output_buffer.append(eval(aid))
+        self.msg(1, "Cursor Location (" + str(self.cursor_addr) + "): Row: %r, Column: %r ",
+                 self.BA_TO_ROW(self.cursor_addr),
+                 self.BA_TO_COL(self.cursor_addr))
+        self.output_buffer.append(self.ENCODE_BADDR(self.cursor_addr))
+
+        return self.send_tn3270(self.output_buffer)
+
+    def send_enter(self):
+        self.output_buffer = []
+        self.msg(1, "Generating Output Buffer for send_enter")
+        self.output_buffer.append(ENTER)
+        self.msg(1, "Cursor Location (" + str(self.cursor_addr) + "): Row: %r, Column: %r ",
+                 self.BA_TO_ROW(self.cursor_addr),
+                 self.BA_TO_COL(self.cursor_addr))
+        self.output_buffer.append(self.ENCODE_BADDR(self.cursor_addr))
+        return self.send_tn3270(self.output_buffer)
+
+    def hexdump(self, src, length=8):
+        """ Used to debug connection issues """
+        result = []
+        digits = 4 if isinstance(src, str) else 2
+        for i in range(0, len(src), length):
+            s = src[i:i + length]
+            hexa = ' '.join(["%0*X" % (digits, ord(x)) for x in s])
+            text = ''.join([x if 0x20 <= ord(x) < 0x7F else '.' for x in s])
+            result.append("%04X   %-*s   %s" % (i, length * (digits + 1), hexa, text))
+        return '\n'.join(result)
+
+    def raw_screen_buffer(self):
+        """ returns a list containing all the tn3270 data received """
+        return self.raw_tn
+
+    def writeable(self):
+        """ Returns a list with all writeable fields as beginning/ending tuples """
+        writeable_list = []
+        b_loc = 1
+        for i in self.fa_buffer:
+            if i != chr(0x00) and not (struct.unpack(">B", i)[0] & 0x20):
+                # find next SFA:
+                j_loc = 1
+                for j in self.fa_buffer[b_loc + 1:]:
+                    if j != chr(0x00) and (struct.unpack(">B", j)[0] & 0x20):
+                        break
+                    j_loc += 1
+                self.msg(1, "Writeable Area: %d Row: %d Col: %d Length: %d", b_loc, self.BA_TO_ROW(b_loc + 1),
+                         self.BA_TO_COL(b_loc + 1), j_loc)
+                writeable_list.append([b_loc + 1, b_loc + 1 + j_loc])
+            b_loc += 1
+        return writeable_list
+
+    def is_ssl(self):
+        """ returns True if the connection is SSL. False if not. """
+        return self.ssl
+
+
+def test():
+    """Test program for tn3270lib.
+
+    Usage: python tn3270lib.py [-d] ... [host [port]]
+
+    Default host is localhost; default port is 23.
+
+    """
+    debuglevel = 0
+    while sys.argv[1:] and sys.argv[1] == '-d':
+        debuglevel = debuglevel + 1
+        del sys.argv[1]
+    host = 'localhost'
+    if sys.argv[1:]:
+        host = sys.argv[1]
+    port = 0
+    if sys.argv[2:]:
+        portstr = sys.argv[2]
+        try:
+            port = int(portstr)
+        except ValueError:
+            port = socket.getservbyname(portstr, 'tcp')
+    tn = TN3270()
+    tn.set_debuglevel(debuglevel)
+    tn.initiate(host, port)
+    tn.print_screen()
+    tn.disconnect()
+
+
+if __name__ == '__main__':
+    test()
