@@ -1,0 +1,1903 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "id": "RACFUSER_PUBLIC",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "PUBLIC",
+          "description": "All users / public"
+        }
+      },
+      {
+        "id": "RACFGROUP_FTPD",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "FTPD",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFGROUP_ADMIN",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "ADMIN",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFGROUP_RAKFADM",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "RAKFADM",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFGROUP_USER",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "USER",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFGROUP_EXTDEV1",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "EXTDEV1",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFGROUP_EXTAPP",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "EXTAPP",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFGROUP_BKPGRP",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "BKPGRP",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFGROUP_MRRESTSV",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "MRRESTSV",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFGROUP_MRRESTS",
+        "kinds": [
+          "RACFGroup"
+        ],
+        "properties": {
+          "name": "MRRESTS",
+          "GPBD_OWNER_ID": "IBMUSER",
+          "GPBD_UACC": "NONE"
+        }
+      },
+      {
+        "id": "RACFUSER_FTPD",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "FTPD",
+          "displayname": "FTPD",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "FTPD"
+        }
+      },
+      {
+        "id": "RACFUSER_HERC01",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "HERC01",
+          "displayname": "HERC01",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "YES",
+          "USBD_DEFGRP_ID": "ADMIN"
+        }
+      },
+      {
+        "id": "RACFPRIVILEGE_SPECIAL",
+        "kinds": [
+          "RACFPrivilege"
+        ],
+        "properties": {
+          "name": "SPECIAL"
+        }
+      },
+      {
+        "id": "RACFPRIVILEGE_OPERATIONS",
+        "kinds": [
+          "RACFPrivilege"
+        ],
+        "properties": {
+          "name": "OPERATIONS"
+        }
+      },
+      {
+        "id": "RACFUSER_HERC02",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "HERC02",
+          "displayname": "HERC02",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "YES",
+          "USBD_DEFGRP_ID": "ADMIN"
+        }
+      },
+      {
+        "id": "RACFUSER_HERC03",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "HERC03",
+          "displayname": "HERC03",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "USER"
+        }
+      },
+      {
+        "id": "RACFUSER_HERC04",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "HERC04",
+          "displayname": "HERC04",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "USER"
+        }
+      },
+      {
+        "id": "RACFUSER_IBMUSER",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "IBMUSER",
+          "displayname": "IBMUSER",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "YES",
+          "USBD_DEFGRP_ID": "ADMIN"
+        }
+      },
+      {
+        "id": "RACFUSER_EXTDEV1",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "EXTDEV1",
+          "displayname": "EXTDEV1",
+          "description": "MEDIUM RED DEMO - EX",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "EXTDEV1"
+        }
+      },
+      {
+        "id": "RACFUSER_BKPUSR",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "BKPUSR",
+          "displayname": "BKPUSR",
+          "description": "MEDIUM RED DEMO - BA",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "BKPGRP"
+        }
+      },
+      {
+        "id": "RACFUSER_MRRESTSV",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "MRRESTSV",
+          "displayname": "MRRESTSV",
+          "description": "MEDIUM RED DEMO - RE",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "MRRESTSV"
+        }
+      },
+      {
+        "id": "RACFUSER_MRPRIVSV",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "MRPRIVSV",
+          "displayname": "MRPRIVSV",
+          "description": "MEDIUM RED DEMO - MR",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "RAKFADM"
+        }
+      },
+      {
+        "id": "RACFUSER_MRPRIVS",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "MRPRIVS",
+          "displayname": "MRPRIVS",
+          "description": "MEDIUM RED DEMO - MR",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "RAKFADM"
+        }
+      },
+      {
+        "id": "RACFUSER_MRRESTS",
+        "kinds": [
+          "RACFUser"
+        ],
+        "properties": {
+          "name": "MRRESTS",
+          "displayname": "MRRESTS",
+          "description": "MEDIUM RED DEMO - RE",
+          "domain": "RACF",
+          "USBD_REVOKE": "NO",
+          "USBD_SPECIAL": "NO",
+          "USBD_DEFGRP_ID": "MRRESTS"
+        }
+      },
+      {
+        "id": "RACFDATASET_*",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "*",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_IPCS.DATA.SET.DIRECTRY",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "IPCS.DATA.SET.DIRECTRY",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_IPCS.PROBLEM.DIRECTRY",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "IPCS.PROBLEM.DIRECTRY",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_RPFPROF.CLUSTER",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "RPFPROF.CLUSTER",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_SYS1.BRODCAST",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "SYS1.BRODCAST",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_SYS1.MCAT.*",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "SYS1.MCAT.*",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_SYS1.PAGE.*",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "SYS1.PAGE.*",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_SYS1.SECURE.*",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "SYS1.SECURE.*",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_SYS1.STGINDEX",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "SYS1.STGINDEX",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_SYS1.UCAT.TK5",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "SYS1.UCAT.TK5",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_SYS1.UCAT.TSO",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "SYS1.UCAT.TSO",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_TK5MIG.*",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "TK5MIG.*",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_EXTDEV1.**",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "EXTDEV1.**",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_PAYROLL.PROD.JCL",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "PAYROLL.PROD.JCL",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_SYS1.MRDEMO.APFLIB",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "SYS1.MRDEMO.APFLIB",
+          "generic": false,
+          "warning": false,
+          "isAPF": true
+        }
+      },
+      {
+        "id": "RACFDATASET_MRDEMO.SCHED.CNTL",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "MRDEMO.SCHED.CNTL",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_MRDEMO.SPECIAL.PROBE",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "MRDEMO.SPECIAL.PROBE",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_MRDEMO.APFTEST",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "MRDEMO.APFTEST",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_DEMO.WORK.**",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "DEMO.WORK.**",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFDATASET_MRDEMO.GTEMP",
+        "kinds": [
+          "RACFDataset"
+        ],
+        "properties": {
+          "name": "MRDEMO.GTEMP",
+          "generic": false,
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_$TSTVS",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "$TSTVS",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_DDTAPFAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "DDTAPFAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_DIAG8CMD",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "DIAG8CMD",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_DSSAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "DSSAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_ETPSAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "ETPSAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_FTPAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "FTPAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_JRPAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "JRPAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_NONQAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "NONQAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_PGMAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "PGMAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_RAKFADM",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "RAKFADM",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_SHOWAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "SHOWAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_STEPAUTH",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "STEPAUTH",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_SVC244",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "SVC244",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_STGADMIN.ADR.STGADMIN.RESTORE",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "STGADMIN.ADR.STGADMIN.RESTORE",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFRESOURCE_MRDEMO.SPECIAL",
+        "kinds": [
+          "RACFResource"
+        ],
+        "properties": {
+          "name": "MRDEMO.SPECIAL",
+          "warning": false
+        }
+      },
+      {
+        "id": "RACFUNDEFINED_STCGROUP",
+        "kinds": [
+          "RACFUndefined"
+        ],
+        "properties": {
+          "name": "STCGROUP",
+          "isOrphan": true
+        }
+      }
+    ],
+    "edges": [
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_FTPD",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_FTPD",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_FTPD",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_FTPD",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_HERC01",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_HERC01",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_HERC01",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_HERC01",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_HERC02",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_HERC02",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_HERC03",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_USER",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_HERC03",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_USER",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_HERC04",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_USER",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_HERC04",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_USER",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_IBMUSER",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_IBMUSER",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_EXTDEV1",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_EXTDEV1",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_EXTDEV1",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_EXTDEV1",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_EXTDEV1",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_EXTAPP",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_EXTDEV1",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_EXTAPP",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_BKPUSR",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_BKPGRP",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_BKPUSR",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_BKPGRP",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_MRRESTSV",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_MRRESTSV",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_MRRESTSV",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_MRRESTSV",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_MRPRIVSV",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_MRPRIVSV",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_MRPRIVS",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_MRPRIVS",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFMemberOf",
+        "start": {
+          "value": "RACFUSER_MRRESTS",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_MRRESTS",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFGroupAuth_USE",
+        "start": {
+          "value": "RACFUSER_MRRESTS",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFGROUP_MRRESTS",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFHasPrivilege",
+        "start": {
+          "value": "RACFUSER_HERC01",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFPRIVILEGE_SPECIAL",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFHasPrivilege",
+        "start": {
+          "value": "RACFUSER_HERC01",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFPRIVILEGE_OPERATIONS",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFHasPrivilege",
+        "start": {
+          "value": "RACFUSER_HERC02",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFPRIVILEGE_SPECIAL",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFHasPrivilege",
+        "start": {
+          "value": "RACFUSER_HERC02",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFPRIVILEGE_OPERATIONS",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFHasPrivilege",
+        "start": {
+          "value": "RACFUSER_IBMUSER",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFPRIVILEGE_SPECIAL",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFHasPrivilege",
+        "start": {
+          "value": "RACFUSER_IBMUSER",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFPRIVILEGE_OPERATIONS",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_*",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "READ"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_IPCS.DATA.SET.DIRECTRY",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_IPCS.PROBLEM.DIRECTRY",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_RPFPROF.CLUSTER",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.BRODCAST",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.MCAT.*",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "READ"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.UCAT.TK5",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.UCAT.TSO",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUSER_PUBLIC",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_TK5MIG.*",
+          "match_by": "id"
+        },
+        "properties": {
+          "via": "UACC",
+          "Authorization": "READ"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_*",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "ALTER"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_*",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "ALTER"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.MCAT.*",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.MCAT.*",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.SECURE.*",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "NONE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.SECURE.*",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_TK5MIG.*",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_TK5MIG.*",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_EXTDEV1",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_EXTDEV1.**",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "ALTER"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_EXTAPP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_PAYROLL.PROD.JCL",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_BKPGRP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_PAYROLL.PROD.JCL",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "READ"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.MRDEMO.APFLIB",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "ALTER"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUSER_EXTDEV1",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.MRDEMO.APFLIB",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "READ"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_BKPGRP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.MRDEMO.APFLIB",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "NONE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_MRDEMO.SCHED.CNTL",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "ALTER"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_MRDEMO.SPECIAL.PROBE",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "READ"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_EXTDEV1",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_DEMO.WORK.**",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "ALTER"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_MRRESTSV",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.MRDEMO.APFLIB",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "ALTER"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUSER_MRRESTSV",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_DEMO.WORK.**",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "READ"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_MRPRIVSV",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_MRDEMO.GTEMP",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_MRRESTS",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_SYS1.MRDEMO.APFLIB",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "ALTER"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUSER_MRRESTS",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_DEMO.WORK.**",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "READ"
+        }
+      },
+      {
+        "kind": "RACFCanWrite",
+        "start": {
+          "value": "RACFUSER_MRPRIVS",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFDATASET_MRDEMO.GTEMP",
+          "match_by": "id"
+        },
+        "properties": {
+          "Authorization": "UPDATE"
+        }
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_$TSTVS",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_$TSTVS",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_DDTAPFAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_DDTAPFAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_DIAG8CMD",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_DIAG8CMD",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_DSSAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_DSSAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_ETPSAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_ETPSAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_FTPAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_JRPAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_JRPAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_NONQAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_NONQAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_PGMAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_PGMAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_RAKFADM",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_RAKFADM",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_SHOWAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_SHOWAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_STEPAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_STEPAUTH",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_SVC244",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUSER_FTPD",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_SVC244",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFUNDEFINED_STCGROUP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_SVC244",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_BKPGRP",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_STGADMIN.ADR.STGADMIN.RESTORE",
+          "match_by": "id"
+        },
+        "properties": {}
+      },
+      {
+        "kind": "RACFCanRead",
+        "start": {
+          "value": "RACFGROUP_ADMIN",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "RACFRESOURCE_MRDEMO.SPECIAL",
+          "match_by": "id"
+        },
+        "properties": {}
+      }
+    ]
+  }
+}
